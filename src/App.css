@@ -1,0 +1,582 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  background: #f6f8fb;
+  color: #172033;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.header {
+  height: 76px;
+  padding: 0 7%;
+  background: #ffffff;
+  border-bottom: 1px solid #e7ebf0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 11px;
+
+  background: #0f172a;
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 750;
+}
+
+.brand p {
+  margin: 2px 0 0;
+  font-size: 12px;
+  color: #7a8496;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 13px;
+  color: #657084;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #16a34a;
+}
+
+/* ============================================================
+   MAIN CONTAINER
+   ============================================================ */
+
+.container {
+  width: min(900px, 92%);
+  margin: 0 auto;
+  padding: 70px 0 50px;
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+
+.hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 7px 13px;
+  border-radius: 999px;
+
+  background: #eef2ff;
+  color: #3949ab;
+
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.hero h2 {
+  max-width: 700px;
+  margin: 18px auto 12px;
+
+  font-size: clamp(34px, 5vw, 50px);
+  line-height: 1.08;
+  letter-spacing: -1.8px;
+}
+
+.hero h2 span {
+  display: block;
+  color: #4f46e5;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: 0 auto;
+
+  color: #667085;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* ============================================================
+   EMAIL FORM
+   ============================================================ */
+
+.email-card {
+  background: #ffffff;
+  border: 1px solid #e3e7ed;
+  border-radius: 18px;
+  padding: 30px;
+
+  box-shadow:
+    0 15px 40px rgba(15, 23, 42, 0.06);
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 9px;
+
+  font-size: 13px;
+  font-weight: 700;
+  color: #344054;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+
+  border: 1px solid #d9dee7;
+  border-radius: 10px;
+
+  background: #fbfcfe;
+  color: #172033;
+
+  padding: 13px 14px;
+
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #6366f1;
+
+  box-shadow:
+    0 0 0 3px rgba(99, 102, 241, 0.1);
+
+  background: #ffffff;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 260px;
+  line-height: 1.6;
+}
+
+.analyze-button {
+  width: 100%;
+  height: 50px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #111827;
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  font-weight: 700;
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.analyze-button:hover {
+  background: #1f2937;
+  transform: translateY(-1px);
+}
+
+.analyze-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ============================================================
+   ERROR
+   ============================================================ */
+
+.error-message {
+  margin-bottom: 18px;
+  padding: 12px 14px;
+
+  border-radius: 9px;
+
+  background: #fff1f2;
+  color: #be123c;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  font-size: 13px;
+}
+
+/* ============================================================
+   INFO
+   ============================================================ */
+
+.info {
+  margin-top: 15px;
+
+  text-align: center;
+  color: #7a8496;
+
+  font-size: 12px;
+}
+
+.info span {
+  color: #16a34a;
+  margin-right: 5px;
+}
+
+/* ============================================================
+   RESULTS
+   ============================================================ */
+
+.results-header {
+  margin-bottom: 25px;
+}
+
+.results-header p {
+  margin: 0 0 5px;
+
+  color: #6366f1;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.results-header h2 {
+  margin: 0;
+
+  font-size: 30px;
+  letter-spacing: -0.7px;
+}
+
+/* ============================================================
+   RESULT CARD
+   ============================================================ */
+
+.result-card {
+  min-height: 190px;
+
+  padding: 30px;
+
+  border-radius: 18px;
+
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  border: 1px solid;
+}
+
+.result-card.safe {
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+  color: #166534;
+}
+
+.result-card.suspicious {
+  background: #fffbeb;
+  border-color: #fde68a;
+  color: #92400e;
+}
+
+.result-card.high-risk {
+  background: #fff7ed;
+  border-color: #fed7aa;
+  color: #9a3412;
+}
+
+.result-card.phishing {
+  background: #fff1f2;
+  border-color: #fecdd3;
+  color: #be123c;
+}
+
+.result-icon {
+  width: 76px;
+  height: 76px;
+
+  flex-shrink: 0;
+
+  border-radius: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.result-main {
+  flex: 1;
+}
+
+.result-label {
+  display: block;
+
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+
+  opacity: 0.7;
+}
+
+.result-main h3 {
+  margin: 4px 0;
+
+  font-size: 32px;
+  letter-spacing: -1px;
+}
+
+.risk-level {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+}
+
+.score {
+  min-width: 130px;
+  text-align: right;
+}
+
+.score span {
+  display: block;
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.score strong {
+  font-size: 46px;
+  line-height: 1;
+}
+
+.score small {
+  font-size: 16px;
+  opacity: 0.7;
+}
+
+/* ============================================================
+   DETAILS
+   ============================================================ */
+
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+
+  margin-top: 18px;
+}
+
+.detail-card {
+  min-height: 190px;
+
+  padding: 24px;
+
+  background: #ffffff;
+
+  border: 1px solid #e3e7ed;
+  border-radius: 15px;
+
+  box-shadow:
+    0 10px 30px rgba(15, 23, 42, 0.04);
+}
+
+.detail-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 18px;
+
+  font-size: 14px;
+  font-weight: 750;
+  color: #344054;
+}
+
+.indicators {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.indicators li {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 8px 0;
+
+  color: #475467;
+  font-size: 13px;
+}
+
+.indicator-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+  background: #f59e0b;
+
+  flex-shrink: 0;
+}
+
+.no-indicators {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #15803d;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.justification {
+  margin: 0;
+
+  color: #596579;
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* ============================================================
+   RESET BUTTON
+   ============================================================ */
+
+.reset-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  margin: 24px auto 0;
+
+  padding: 12px 20px;
+
+  border: 1px solid #d9dee7;
+  border-radius: 9px;
+
+  background: #ffffff;
+  color: #344054;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.reset-button:hover {
+  background: #f8fafc;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+footer {
+  padding: 25px;
+
+  text-align: center;
+
+  border-top: 1px solid #e7ebf0;
+
+  color: #98a2b3;
+  font-size: 11px;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 700px) {
+
+  .header {
+    padding: 0 4%;
+  }
+
+  .status {
+    display: none;
+  }
+
+  .container {
+    padding-top: 45px;
+  }
+
+  .email-card {
+    padding: 20px;
+  }
+
+  .result-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .score {
+    text-align: left;
+  }
+
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h2 {
+    font-size: 36px;
+  }
+}
